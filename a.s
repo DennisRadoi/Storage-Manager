@@ -51,7 +51,7 @@ cautare_spatiu:
 
 ifvECXisO:
     addl $1, %ebx             # contorul nr bloc este incrementat
-    cmp %eax,%ebx             # decidem daca am gasit un interval liber
+    cmp %eax, %ebx             # decidem daca am gasit un interval liber
     jg alocare
          
     addl $1,%ecx
@@ -450,9 +450,9 @@ clearDEFRAG:
     cmpl len , %edx     
     jg memorie         
 
-    movl $0, (%edi,%edx,4)  # Write zero at the current write index
-    addl $1, %edx       # Increment write index
-    jmp clearDEFRAG      # Repeat for remaining positions
+    movl $0, (%edi,%edx,4) 
+    addl $1, %edx       
+    jmp clearDEFRAG      
 
 exit_program:
 
